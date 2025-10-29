@@ -1,17 +1,31 @@
 function Drink({ name }) {
-    return (
-      <section>
+  if(name=="té"){
+    return(<section>
         <h1>{name}</h1>
         <dl>
           <dt>Parte de la planta</dt>
-          <dd>{name === 'té' ? 'hoja' : 'grano'}</dd>
+          <dd>hoja</dd>
           <dt>Contenido de cafeína</dt>
-          <dd>{name === 'té' ? '15–70 mg/taza' : '80–185 mg/taza'}</dd>
+          <dd>15–70 mg/taza </dd>
           <dt>Antigüedad</dt>
-          <dd>{name === 'té' ? '4,000+ años' : '1,000+ años'}</dd>
+          <dd>4,000+ años</dd>
         </dl>
-      </section>
-    );
+      </section>)
+  }else{
+    return( <section>
+        <h1>{name}</h1>
+        <dl>
+          <dt>Parte de la planta</dt>
+          <dd>grano</dd>
+          <dt>Contenido de cafeína</dt>
+          <dd>80–185 mg/taza</dd>
+          <dt>Antigüedad</dt>
+          <dd>1,000+ años</dd>
+        </dl>
+      </section>)
+
+  }
+   
   }
   
   export default function DrinkList() {
